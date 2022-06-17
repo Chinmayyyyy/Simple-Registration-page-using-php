@@ -49,7 +49,7 @@ if(isset($_POST['name'])){
 <body>
     <img class="lp "src="lp.jpg" alt="trip">
     <div class="container">
-        <h1>Welcome to S.H Jondhale Polytechnic trip form</h1>
+        <h1>Welcome to my trip form</h1>
         <p>Enter your details and submit this form to confirm your participation in the trip </p>
         <?php
         if($insert == true){
