@@ -11,6 +11,7 @@ if(isset($_POST['name'])){
     if(!$con){
         die("Connection to this database failed due to" . mysqli_connect_error());
     }
+    // echo "Succes connecting to ther db"; 
 
     $name = $_POST['name'];
     $age = $_POST['age'];
@@ -19,9 +20,11 @@ if(isset($_POST['name'])){
     $phone = $_POST['phone'];
     $desc = $_POST['desc'];
     $sql = "INSERT INTO `form`.`form` (`name`, `age`, `gender`, `email`, `phone`, `other`, `dt`) VALUES ('$name', '$age', '$gender', '$email', '$phone', '$desc', current_timestamp());";
+    // echo $sql;
 
     if($con->query($sql) == true){
-        $insert = true;
+        // echo "Succesfully Inserted";
+        $insert = true;[]
     }
     else{
         echo "ERROR: $sql <br> $con->error";
@@ -46,7 +49,7 @@ if(isset($_POST['name'])){
 <body>
     <img class="lp "src="lp.jpg" alt="trip">
     <div class="container">
-        <h1>Welcome to My form</h1>
+        <h1>Welcome to S.H Jondhale Polytechnic trip form</h1>
         <p>Enter your details and submit this form to confirm your participation in the trip </p>
         <?php
         if($insert == true){
@@ -66,6 +69,7 @@ if(isset($_POST['name'])){
         </form>
     </div>
     <script src="index.js"></script>
+    <!--INSERT INTO `form` (`sno`, `name`, `age`, `gender`, `email`, `phone`, `other`, `dt`) VALUES ('1', 'name', '18', 'Male', 'support@test.com', '999999999', 'this is my first form', current_timestamp()); -->
     
 </body>
 </html>
